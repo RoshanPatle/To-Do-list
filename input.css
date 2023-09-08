@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer  base {
+  body {
+    @apply p-0 m-0 font-sans bg-purple-600;
+  }
+
+  ul li {
+    @apply py-2 pl-10 pr-4 text-2xl relative before:bg-[url('/images/unchecked.png')]  cursor-pointer
+  }
+
+  ul li::before{
+    @apply  cursor-pointer w-6  h-6 rounded-3xl absolute bg-cover bg-center top-4 left-0 border-black border-2  
+    
+  }
+
+ul li span{
+  @apply top-4 right-0 absolute w-7 h-7   text-3xl cursor-pointer rounded-lg text-center leading-[1.5rem]
+}
+
+ul li span:hover{
+  @apply bg-slate-300
+}
+  
+  ul li.checked{
+    @apply line-through before:bg-[url('/images/checked.png')]
+  }
+}
+
